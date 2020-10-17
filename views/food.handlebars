@@ -1,0 +1,29 @@
+<img class="img-fluid rounded" src="{{foodData.img}}" />
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="float-left">Rating </div>
+        <div class="float-right">
+            {{foodData.rating}}/10</div>
+    </li>
+    <li class="list-group-item">
+        <div class="float-left">Vegetarian </div>
+        <div class="float-right">
+            {{#if foodData.vegetarian }}✅{{else}}❌{{/if}}
+    </li>
+    </li>
+    <li class="list-group-item">
+        <div class="float-left">Price</div>
+        <div class="float-right">
+            {{foodData.price}}€
+    </li>
+    </li>
+    <li class="list-group-item">
+        <div class="float-left">Where else to find it?</div>
+        <div class="float-right">
+            <a href="{{foodData.address}}" target="_blank" rel="noreferrer">
+                {{> map }}
+            </a>
+    </li>
+    </li>
+</ul>
